@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- 부트스트랩 관련 CSS & JQuery script -->
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!-- 스타일 -->
+    <style>
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="#">로고 </a>-->
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse  navbar-ex1-collapse">
+            <a href="/pdf/makeHalfPagePDF"><button type="button" class="btn btn-default navbar-btn">한 페이지를 반으로 분할하기</button></a>
+            <!-- <a href="/"><button type="button" class="btn btn-default navbar-btn"></button></a>
+            <a href="/"><button type="button" class="btn btn-default navbar-btn"></button></a>
+            <a href="/"><button type="button" class="btn btn-default navbar-btn"></button></a>
+
+            <p class="navbar-text pull-right"><a href="" class="navbar-link">Logout</a></p>
+            -->
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="container">
+        <div class="starter-template">
+
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
